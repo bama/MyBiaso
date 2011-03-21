@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43184F3F-81D3-4480-B0FE-4BEFF4099349}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyBiaso</RootNamespace>
+    <AssemblyName>MyBiaso</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Base.Core">
+      <HintPath>..\..\Library\Base.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Base.WinUI">
+      <HintPath>..\..\Library\Base.WinUI.dll</HintPath>
+    </Reference>
+    <Reference Include="InterfaceLib">
+      <HintPath>..\..\Library\InterfaceLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugins.PluginManager">
+      <HintPath>..\..\Library\Plugins.PluginManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Library\System.Data.SQLite.dll" />
+    <Content Include="Plugins.PluginManager.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyBiaso.Core.Model\MyBiaso.Core.Model.csproj">
+      <Project>{925766A0-7BBE-487A-8CB2-6D186E0F3347}</Project>
+      <Name>MyBiaso.Core.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyBiaso.Core\MyBiaso.Core.csproj">
+      <Project>{6F3F839C-C7B2-4FFD-9FBD-2B112056D5FD}</Project>
+      <Name>MyBiaso.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyBiaso.Plugin.Activities\MyBiaso.Plugin.Activities.csproj">
+      <Project>{69967A6E-6AF3-4B81-BCDE-755BBE276B9B}</Project>
+      <Name>MyBiaso.Plugin.Activities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyBiaso.Plugin.Customer\MyBiaso.Plugin.Customer.csproj">
+      <Project>{EDB4614E-6595-4002-B127-13973C36A593}</Project>
+      <Name>MyBiaso.Plugin.Customer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyBiaso.Plugin.Settings\MyBiaso.Plugin.Settings.csproj">
+      <Project>{824B2261-29B8-4284-A5EF-1CECCA7AD062}</Project>
+      <Name>MyBiaso.Plugin.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyBiaso.Plugin.Startup\MyBiaso.Plugin.Startup.csproj">
+      <Project>{C59F531B-D760-46E5-A54B-BCD7C9EE2183}</Project>
+      <Name>MyBiaso.Plugin.Startup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyBiaso.Policy.ProductLine.Standard\MyBiaso.Policy.ProductLine.Standard.csproj">
+      <Project>{41612991-5824-4215-9161-328AF8636CA9}</Project>
+      <Name>MyBiaso.Policy.ProductLine.Standard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyBiaso.Themes.Obsidian\MyBiaso.Themes.Obsidian.csproj">
+      <Project>{A6337A3E-FF8E-4995-8CBD-8BAA3C5A75D6}</Project>
+      <Name>MyBiaso.Themes.Obsidian</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

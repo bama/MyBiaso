@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<plugins>
+	<plugin>MyBiaso.Plugin.Startup.dll</plugin>
+	<plugin>MyBiaso.Plugin.Settings.dll</plugin>
+	<plugin>MyBiaso.Plugin.Customer.dll</plugin>
+	<plugin>MyBiaso.Plugin.Activities.dll</plugin>
+</plugins>
