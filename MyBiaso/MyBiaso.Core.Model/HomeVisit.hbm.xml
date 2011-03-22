@@ -9,6 +9,7 @@
 		<property name="Begin" />
 		<property name="End" />
 		<property name="DrivenHome" />
+		<property name="DistanceTravelled" />
 		<many-to-one name="Customer" cascade="none" class="Customer" lazy="false" />
 	</class>
 </hibernate-mapping>

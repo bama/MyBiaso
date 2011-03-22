@@ -33,8 +33,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBiaso.Core.Activities", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBiaso.Plugin.Activities", "MyBiaso.Plugin.Activities\MyBiaso.Plugin.Activities.csproj", "{69967A6E-6AF3-4B81-BCDE-755BBE276B9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBiaso.Core.DistanceCalculation", "MyBiaso.Core.DistanceCalculation\MyBiaso.Core.DistanceCalculation.csproj", "{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,16 +163,6 @@ Global
 		{69967A6E-6AF3-4B81-BCDE-755BBE276B9B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{69967A6E-6AF3-4B81-BCDE-755BBE276B9B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{69967A6E-6AF3-4B81-BCDE-755BBE276B9B}.Release|x86.ActiveCfg = Release|Any CPU
-		{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}.Release|Any CPU.Build.0 = Release|Any CPU
-		{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -192,6 +180,5 @@ Global
 		{6F3F839C-C7B2-4FFD-9FBD-2B112056D5FD} = {5791B9AB-5270-4078-8E5D-55EEB835EA6C}
 		{F0188264-69FE-4BD5-9398-617ECB0194E9} = {5791B9AB-5270-4078-8E5D-55EEB835EA6C}
 		{FE5F373B-DA7F-429D-991F-CC8EB019A409} = {5791B9AB-5270-4078-8E5D-55EEB835EA6C}
-		{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612} = {5791B9AB-5270-4078-8E5D-55EEB835EA6C}
 	EndGlobalSection
 EndGlobal

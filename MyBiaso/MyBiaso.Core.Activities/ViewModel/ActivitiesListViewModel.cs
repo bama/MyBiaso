@@ -48,10 +48,11 @@ namespace MyBiaso.Core.Activities.ViewModel {
         /// </summary>
         public void LoadObjects() {
             activities.Clear();
-
-            var daoActivities = null != dataFunction ? dataFunction() : DaoFactory.Instance.ActivitiesStore.FindAll();
-
-            Array.ForEach(daoActivities.ToArray(), a => activities.Add(a));
+            var daoActivities = null != dataFunction
+                                    ? dataFunction()
+                                    : DaoFactory.Instance.ActivitiesStore.FindAll();
+            // absteigend sortieren, damit die letzte Aktivität oben steht
+            Array.ForEach(daoActivities.OrderBy(a => a.Begin).Reverse().ToArray(), a => activities.Add(a));
         }
 
         /// <summary>

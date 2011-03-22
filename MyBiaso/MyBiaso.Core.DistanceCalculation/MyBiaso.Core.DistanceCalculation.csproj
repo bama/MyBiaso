@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FE5F373B-DA7F-429D-991F-CC8EB019A409}</ProjectGuid>
+    <ProjectGuid>{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyBiaso.Core.Activities</RootNamespace>
-    <AssemblyName>MyBiaso.Core.Activities</AssemblyName>
+    <RootNamespace>MyBiaso.Core.DistanceCalculation</RootNamespace>
+    <AssemblyName>MyBiaso.Core.DistanceCalculation</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -32,43 +32,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="InterfaceLib">
-      <HintPath>..\..\Library\InterfaceLib.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate">
-      <HintPath>..\..\Library\NHibernate.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Vsa" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActivitiesFactories.cs" />
-    <Compile Include="ActivitiesController.cs" />
-    <Compile Include="ActivitiesRegistry.cs" />
-    <Compile Include="DataStore\DaoFactory.cs" />
-    <Compile Include="DataStore\IActivitiesCollectionFactory.cs" />
-    <Compile Include="DataStore\IActivitiesStore.cs" />
-    <Compile Include="DataStore\ICustomerStore.cs" />
-    <Compile Include="DataStore\NHibernateActivitiesStore.cs" />
-    <Compile Include="DataStore\NHibernateCustomerStore.cs" />
+    <Compile Include="Address.cs" />
+    <Compile Include="Calculation.cs" />
+    <Compile Include="Geocode\GoogleMapsGeocode.cs" />
+    <Compile Include="Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\HomeVisitDataViewModel.cs" />
-    <Compile Include="ViewModel\ActivitiesListViewModel.cs" />
-    <Compile Include="Views\IActivitiesViewFactory.cs" />
-    <Compile Include="Views\IActivitiesListView.cs" />
-    <Compile Include="Views\IHomeVisitDataView.cs" />
-    <Compile Include="Views\IHomeVisitDataViewFactory.cs" />
+    <Compile Include="Route.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyBiaso.Core.DistanceCalculation\MyBiaso.Core.DistanceCalculation.csproj">
-      <Project>{590FC7B9-4AC8-4E6B-8C9D-4F23C2C3B612}</Project>
-      <Name>MyBiaso.Core.DistanceCalculation</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MyBiaso.Core.Model\MyBiaso.Core.Model.csproj">
       <Project>{925766A0-7BBE-487A-8CB2-6D186E0F3347}</Project>
       <Name>MyBiaso.Core.Model</Name>

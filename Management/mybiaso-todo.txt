@@ -1,3 +1,1 @@
-- Nachfrage beim Löschen von Aktivitäten
-- sortieren der Aktivitäten nach Zeit (letzter Einsatz zu erst)
-- Einchecken in GitHub?
+- 

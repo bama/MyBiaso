@@ -25,5 +25,10 @@ namespace MyBiaso.Core.Model {
         /// </summary>
         public virtual Customer Customer { get; set; }
 
+        /// <summary>
+        /// Distanz die für den Kunden zurückgelegt wurde
+        /// </summary>
+        public virtual Single DistanceTravelled { get; set; }
+
     }
 }

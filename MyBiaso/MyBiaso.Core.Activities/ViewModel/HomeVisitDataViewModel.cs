@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using AiFrame.InterfaceLib.MVP;
 using MyBiaso.Core.Activities.DataStore;
 using MyBiaso.Core.Activities.Views;
+using MyBiaso.Core.DistanceCalculation;
 using MyBiaso.Core.Model;
 
 namespace MyBiaso.Core.Activities.ViewModel {
@@ -142,6 +143,25 @@ namespace MyBiaso.Core.Activities.ViewModel {
         #endregion
 
         public void UserWantsToSave() {
+
+            var calc = new Calculation();
+
+            if(null != homeVisit.Customer) {
+                var address = new Address {
+                                                City = homeVisit.Customer.City,
+                                                Housenumber = homeVisit.Customer.Housenumber,
+                                                ZipCode = homeVisit.Customer.ZipCode,
+                                                Street = homeVisit.Customer.Street
+                                            };
+                homeVisit.DistanceTravelled = calc.CalculateDistance(address, new Address
+                {
+                    Street = "Unter den Linden",
+                    Housenumber = "1",
+                    City = "Berlin",
+                    ZipCode = "10117"
+                });
+            }
+
             DaoFactory.Instance.ActivitiesStore.SaveOrUpdate(homeVisit);
             view.Close();
         }

@@ -77,6 +77,12 @@ namespace MyBiaso.Plugin.Activities.Window {
                                                                                                       "DrivenHome",
                                                                                                   Width = 50
                                                                                               });
+
+            gridActivities.Columns.Add(new DataGridViewColumn(dataGridViewCell) {
+                                                                                    HeaderText = "Distanz",
+                                                                                    DataPropertyName = "DistanceTravelled",
+                                                                                    Width = 80
+                                                                                });
         }
 
         /// <summary>
@@ -94,8 +100,19 @@ namespace MyBiaso.Plugin.Activities.Window {
                     // formatieren
                     e.Value = string.Format("{0}, {1} (Kundennummer: {2}", value.Lastname,
                                      value.Firstname, value.CustomerNumber);
+                } else {
+                    // leere Zeichenkette
+                    e.Value = String.Empty;
                 }
                 // kennzeichnen das formatiert wurde
+                e.FormattingApplied = true;
+            } else if(4 == e.ColumnIndex) {
+                if(null != e.Value) {
+                    var value = (Single) e.Value;
+                    e.Value = String.Format("{0:f2} km", (value / 1000));
+                } else {
+                    e.Value = String.Empty;
+                }
                 e.FormattingApplied = true;
             }
         }
@@ -135,7 +152,11 @@ namespace MyBiaso.Plugin.Activities.Window {
                     break;
                 case "Delete": 
                     if(GetSelectedIndex() != -1) {
-                        viewModel.UserWantsToDeleteActivity(DataItems[GetSelectedIndex()]);
+                        // nachfragen, ob gelöscht werden soll
+                        if (MessageBox.Show(this, "Möchten Sie den ausgewählten Eintrag löschen?", 
+                            "Löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes) {
+                            viewModel.UserWantsToDeleteActivity(DataItems[GetSelectedIndex()]);
+                        }
                     }
                     break;
             }
