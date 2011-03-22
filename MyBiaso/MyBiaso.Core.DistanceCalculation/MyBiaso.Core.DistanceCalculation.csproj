@@ -32,8 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.JScript" />
-    <Reference Include="Microsoft.Vsa" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Address.cs" />
     <Compile Include="Calculation.cs" />
+    <Compile Include="Geocode\GeocodeException.cs" />
     <Compile Include="Geocode\GoogleMapsGeocode.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,1 +1,1 @@
-- 
+- Änderungen bei Einfügungen in die Liste müssen neu berechnet werden
