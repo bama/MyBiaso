@@ -40,8 +40,11 @@ namespace MyBiaso.Plugin.Reporting.Window {
                 BackColor = Color.FromArgb(234, 234, 234)
             };
 
+            grdReport.CellFormatting += GrdReportCellFormatting;
+
             AddColumns();
         }
+
 
         /// <summary>
         /// Fügt die Spalten in das Grid ein.
@@ -49,6 +52,7 @@ namespace MyBiaso.Plugin.Reporting.Window {
         private void AddColumns() {
 
             DataGridViewCell cell = new DataGridViewTextBoxCell();
+            cell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             grdReport.Columns.Add(new DataGridViewColumn(cell)
                                   {HeaderText = "", DataPropertyName = "TimeSpan", Width = 130});
@@ -114,5 +118,18 @@ namespace MyBiaso.Plugin.Reporting.Window {
         private void cmbTimeSpanChoice_SelectedIndexChanged(object sender, EventArgs e) {
             BindToViewModel(viewModel);
         }
+
+        private void GrdReportCellFormatting(object sender, DataGridViewCellFormattingEventArgs e) {
+             if(2 == e.ColumnIndex) {
+                if(null != e.Value) {
+                    var value = (Single) e.Value;
+                    e.Value = String.Format("{0:f2}", (value / 1000));
+                } else {
+                    e.Value = String.Empty;
+                }
+                e.FormattingApplied = true;
+            }
+        }
+
     }
 }

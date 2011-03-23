@@ -1,4 +1,6 @@
-﻿namespace MyBiaso.Core.Setting.Controller {
+﻿using System.Collections.Generic;
+
+namespace MyBiaso.Core.Setting.Controller {
 
     /// <summary>
     /// Controller

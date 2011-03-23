@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -55,6 +56,10 @@
     <Compile Include="SettingFactories.cs" />
     <Compile Include="Controller\ISettingsControllerFactory.cs" />
     <Compile Include="Controller\SettingsController.cs" />
+    <Compile Include="SettingsDataRegistry.cs" />
+    <Compile Include="ViewModel\SettingsViewModel.cs" />
+    <Compile Include="Views\ISettingsView.cs" />
+    <Compile Include="Views\ISettingsViewFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyBiaso.Core.Model\MyBiaso.Core.Model.csproj">
@@ -62,9 +67,7 @@
       <Name>MyBiaso.Core.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

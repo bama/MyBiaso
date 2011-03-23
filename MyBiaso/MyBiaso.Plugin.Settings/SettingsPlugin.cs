@@ -21,6 +21,7 @@ namespace MyBiaso.Plugin.Settings {
         public void Load(ICoreInterface ci, string programPath) {
             // Fabrik erstellen
             SettingFactories.SettingsControllerFactory = new SettingsControllerFactory();
+            SettingFactories.SettingsViewFactory = new SettingsViewFactory();
             ci.FactoryManager.RegisterFactory(SettingFactories.SettingsControllerFactory);
             controller.Load(ci, programPath);
         }

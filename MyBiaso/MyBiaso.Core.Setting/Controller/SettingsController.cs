@@ -26,7 +26,7 @@ namespace MyBiaso.Core.Setting.Controller {
         /// Speichert die übergebene Einstellung.
         /// </summary>
         /// <param name="setting">Einstellung zum Speichern</param>
-        public void StoreSetting(Model.Setting setting) {
+        public void StoreSetting(Model.Setting setting) {   
             if(null == setting) throw new ArgumentNullException("setting");
             // speichern
             DaoFactory.Instance.SettingStore.SaveOrUpdate(setting);

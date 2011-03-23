@@ -1,8 +1,6 @@
 - Aktualisierung der Distanzen bei Änderung der Adresse eines Kunden
-- Aktualsierung der Reporting-Values bei Änderung in Activities
 - Problemreport an mich senden
 - Heimatadresse in den Einstellungen eintragen
-- Formatierung der Kilometerzahl im Reporting
 - Aufnahme von Notizen in die Kundenverwaltung
 - Startbildschirm aktualisieren
 - Icons für die Anwendung
