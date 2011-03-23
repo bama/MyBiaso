@@ -4,4 +4,5 @@
 	<plugin>MyBiaso.Plugin.Settings.dll</plugin>
 	<plugin>MyBiaso.Plugin.Customer.dll</plugin>
 	<plugin>MyBiaso.Plugin.Activities.dll</plugin>
+	<plugin>MyBiaso.Plugin.Reporting.dll</plugin>
 </plugins>

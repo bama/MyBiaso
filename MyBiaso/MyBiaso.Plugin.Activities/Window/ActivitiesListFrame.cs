@@ -98,7 +98,7 @@ namespace MyBiaso.Plugin.Activities.Window {
                 // setzen
                 if(null != value) {
                     // formatieren
-                    e.Value = string.Format("{0}, {1} (Kundennummer: {2}", value.Lastname,
+                    e.Value = string.Format("{0}, {1} (Kundennummer: {2})", value.Lastname,
                                      value.Firstname, value.CustomerNumber);
                 } else {
                     // leere Zeichenkette

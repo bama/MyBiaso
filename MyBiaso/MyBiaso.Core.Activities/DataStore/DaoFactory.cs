@@ -15,7 +15,7 @@ namespace MyBiaso.Core.Activities.DataStore {
         }
 
         /// <summary>
-        /// Zugriff auf die Kunden
+        /// Zugriff auf die Kunden  
         /// </summary>
         public ICustomerStore CustomerStore {
             get { return new NHibernateCustomerStore(DatabaseConnection.GetSession()); }

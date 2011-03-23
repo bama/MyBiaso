@@ -119,6 +119,10 @@
       <Project>{EDB4614E-6595-4002-B127-13973C36A593}</Project>
       <Name>MyBiaso.Plugin.Customer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MyBiaso.Plugin.Reporting\MyBiaso.Plugin.Reporting.csproj">
+      <Project>{81166686-CC51-414C-A7B0-5842C0F28683}</Project>
+      <Name>MyBiaso.Plugin.Reporting</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyBiaso.Plugin.Settings\MyBiaso.Plugin.Settings.csproj">
       <Project>{824B2261-29B8-4284-A5EF-1CECCA7AD062}</Project>
       <Name>MyBiaso.Plugin.Settings</Name>
